@@ -1,6 +1,15 @@
-require "prism_checker_rspec/version"
+# frozen_string_literal: true
 
-module PrismCheckerRspec
-  class Error < StandardError; end
-  # Your code goes here...
+require 'colorizer'
+
+RSpec::Matchers.define(:be_like) do |expected|
+  checker = PrismChecker::Checker.new(colorizer: PrismCheckerRspec::Colorizer)
+
+  match do |actual|
+    checker.check(actual, expected)
+  end
+
+  failure_message do |_actual|
+    checker.report
+  end
 end
