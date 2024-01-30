@@ -1,9 +1,5 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-# Specify your gem's dependencies in prism_checker_rspec.gemspec
+source 'https://rubygems.org'
+
 gemspec
-
-gem 'prism_checker', github: 'prism-checker/prism_checker', branch: 'main'
-
-gem "rake", "~> 12.0"
-gem "rspec", "~> 3.0"
