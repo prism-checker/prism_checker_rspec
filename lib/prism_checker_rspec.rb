@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'prism_checker'
+require 'rspec/matchers'
 require 'colorizer'
 
 RSpec::Matchers.define(:be_like) do |expected|

@@ -2,5 +2,6 @@ Gemfile.lock
 coverage/*
 .idea
 .env
-.byebug_history
+.rspec
+spec/.ruby-version
 .travis.yml

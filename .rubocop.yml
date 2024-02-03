@@ -1,0 +1,13 @@
+inherit_mode:
+  merge:
+    - Exclude
+
+AllCops:
+  TargetRubyVersion: 2.5
+  NewCops: enable
+
+Layout/LineLength:
+  Max: 140
+
+Style/Documentation:
+  Enabled: false
