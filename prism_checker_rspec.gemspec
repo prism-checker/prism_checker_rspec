@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name                  = 'prism_checker_rspec'
-  s.version               = '0.0.3'
+  s.version               = '1.0.0'
   s.required_ruby_version = Gem::Requirement.new('>= 2.5.0')
   s.platform              = Gem::Platform::RUBY
   s.license               = 'BSD-3-Clause'
@@ -17,8 +17,8 @@ Gem::Specification.new do |s|
   s.files                 = Dir.glob('lib/**/*') + %w[LICENSE.md README.md]
   s.require_paths         = ['lib']
 
-  s.add_dependency 'prism_checker', '>= 0.0.3'
-  s.add_dependency 'rspec', '~> 3.12'
+  s.add_dependency 'prism_checker', '>= 1.0.0'
+  s.add_dependency 'rspec', '~> 3.10'
 
   s.add_development_dependency 'byebug', '~> 11.1'
   s.add_development_dependency 'rspec', '~> 3.10'
