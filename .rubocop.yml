@@ -2,12 +2,23 @@ inherit_mode:
   merge:
     - Exclude
 
+plugins:
+  - rubocop-rspec
+
 AllCops:
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 3.1
   NewCops: enable
 
 Layout/LineLength:
   Max: 140
+
+# What this gem exposes is a matcher, not a class
+RSpec/DescribeClass:
+  Enabled: false
+
+# `expect { expect(...) }.to raise_error` reads as one assertion, but counts as two
+RSpec/MultipleExpectations:
+  Max: 2
 
 Style/Documentation:
   Enabled: false
